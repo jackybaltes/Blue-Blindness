@@ -1,0 +1,497 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>Blue Blindness</title>
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/ntnuerc.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <script src="https://daybrush.com/scenejs/release/latest/dist/scene.min.js"></script>
+		
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+        <script src="js/ntnu.js"></script>
+    </head>
+    <body>
+        <div class="reveal">
+        <div class="slides">
+            
+<section id="slide_00002_frag_00001" data-state="slide_00002_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">#url = &#39;http://www.terragalleria.com/images/china/taiw55146.jpeg&#39;</span>
+<span style="color: #408080; font-style: italic">#url = &#39;https://az592774.vo.msecnd.net/pgl-release/Images/ArticleImages/17/17877.jpg?v=1&#39;</span>
+url <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;https://th.bing.com/th/id/R3079f4cc55e2c58f0b615a2fed36840c?rik=0q2MDYjJKHguzw&amp;riu=http</span><span style="color: #BB6688; font-weight: bold">%3a%2f%2f</span><span style="color: #BA2121">farm3.static.flickr.com</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">2143</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">1564936103_28c29d2682.jpg&amp;ehk=qonNJamLXa0EBhbrb9GHOdNDKUh0y5E9oc</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">U4P1sxuQ</span><span style="color: #BB6688; font-weight: bold">%3d</span><span style="color: #BA2121">&amp;risl=&amp;pid=ImgRaw&#39;</span>
+
+img <span style="color: #666666">=</span> io<span style="color: #666666">.</span>imread( url )
+img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(img, (<span style="color: #666666">800</span>, <span style="color: #666666">600</span> ) )
+
+fig <span style="color: #666666">=</span> plt<span style="color: #666666">.</span>figure( figsize<span style="color: #666666">=</span>(<span style="color: #666666">10</span>,<span style="color: #666666">10</span>))
+ax1 <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">1</span>,<span style="color: #666666">1</span>,<span style="color: #666666">1</span>)
+ax1<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Original Image&#39;</span>)
+
+ax1<span style="color: #666666">.</span>imshow(img, interpolation <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;bicubic&#39;</span>)
+ax1<span style="color: #666666">.</span>set_xticks([])
+ax1<span style="color: #666666">.</span>set_yticks([])  
+
+f1 <span style="color: #666666">=</span> addJBFigure( <span style="color: #BA2121">&quot;f1&quot;</span>, <span style="color: #666666">0</span>, <span style="color: #666666">0</span>, fig )
+plt<span style="color: #666666">.</span>close()
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-76a8be99-88ce-4b5f-9625-59fc7e7aca9b" ><span id="id-76a8be99-88ce-4b5f-9625-59fc7e7aca9b"><img id="img-id-76a8be99-88ce-4b5f-9625-59fc7e7aca9b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-651cb30d-d7e4-480d-bb09-e8edd634fe17" ><span id="id-651cb30d-d7e4-480d-bb09-e8edd634fe17"><img id="img-id-651cb30d-d7e4-480d-bb09-e8edd634fe17" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00003_frag_00001" data-state="slide_00003_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Sample Image</h1>
+
+<span id="id-d6b7bcbd-48ef-4b37-b221-d814838486ca" ><span id="id-d6b7bcbd-48ef-4b37-b221-d814838486ca"><img id="img-id-d6b7bcbd-48ef-4b37-b221-d814838486ca"     src="assets/images/f1.svg"/></span>
+</span>
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-9e225a32-9f46-4b62-86c3-69c7ecbc7574" ><span id="id-9e225a32-9f46-4b62-86c3-69c7ecbc7574"><img id="img-id-9e225a32-9f46-4b62-86c3-69c7ecbc7574"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-1b5297b9-dfbe-4af1-bb0f-a2dee5766b1c" ><span id="id-1b5297b9-dfbe-4af1-bb0f-a2dee5766b1c"><img id="img-id-1b5297b9-dfbe-4af1-bb0f-a2dee5766b1c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00004_frag_00001" data-state="slide_00004_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">mapPlane</span>( img, ind, compress ):
+  plane <span style="color: #666666">=</span> img[:,:,ind]
+  mx <span style="color: #666666">=</span> np<span style="color: #666666">.</span>max( plane )
+  mn <span style="color: #666666">=</span> np<span style="color: #666666">.</span>min( plane )
+  avg <span style="color: #666666">=</span> np<span style="color: #666666">.</span>average( plane )
+
+  colors <span style="color: #666666">=</span> [<span style="color: #BA2121">&#39;red&#39;</span>, <span style="color: #BA2121">&#39;green&#39;</span>, <span style="color: #BA2121">&#39;blue&#39;</span> ]
+  <span style="color: #008000">print</span>( <span style="color: #BA2121">&#39;Plane&#39;</span>, colors[ind], <span style="color: #BA2121">&#39;Max&#39;</span>, mx, <span style="color: #BA2121">&#39;Min&#39;</span>, mn, <span style="color: #BA2121">&#39;Average&#39;</span>, avg )
+  
+  plane <span style="color: #666666">=</span> ( plane <span style="color: #666666">-</span> avg ) <span style="color: #666666">//</span> compress <span style="color: #666666">+</span> avg 
+  <span style="color: #408080; font-style: italic">#plane[:,:]=avg</span>
+
+  mx <span style="color: #666666">=</span> np<span style="color: #666666">.</span>max( plane )
+  mn <span style="color: #666666">=</span> np<span style="color: #666666">.</span>min( plane )
+  avg <span style="color: #666666">=</span> np<span style="color: #666666">.</span>average( plane )
+
+  <span style="color: #008000">print</span>( <span style="color: #BA2121">&#39;Plane&#39;</span>, colors[ind], <span style="color: #BA2121">&#39;Max&#39;</span>, mx, <span style="color: #BA2121">&#39;Min&#39;</span>, mn, <span style="color: #BA2121">&#39;Average&#39;</span>, avg )
+  
+  img[:,:,ind] <span style="color: #666666">=</span> plane
+  <span style="color: #008000; font-weight: bold">return</span> plane
+
+img <span style="color: #666666">=</span> io<span style="color: #666666">.</span>imread( url )
+img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(img, (<span style="color: #666666">800</span>, <span style="color: #666666">600</span> ) )
+
+red <span style="color: #666666">=</span> mapPlane( img, <span style="color: #666666">0</span>, <span style="color: #666666">1</span> )
+green <span style="color: #666666">=</span> img[:,:,<span style="color: #666666">1</span>]
+blue <span style="color: #666666">=</span> img[:,:,<span style="color: #666666">2</span>]
+
+fig <span style="color: #666666">=</span> plt<span style="color: #666666">.</span>figure( figsize<span style="color: #666666">=</span>(<span style="color: #666666">10</span>,<span style="color: #666666">10</span>))
+ax1 <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">1</span>,<span style="color: #666666">3</span>,<span style="color: #666666">1</span>)
+ax1<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Red Channel&#39;</span>)
+ax1<span style="color: #666666">.</span>imshow(red, interpolation <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;bicubic&#39;</span>, cmap<span style="color: #666666">=</span><span style="color: #BA2121">&#39;gray&#39;</span>)
+ax1<span style="color: #666666">.</span>set_xticks([])
+ax1<span style="color: #666666">.</span>set_yticks([])  
+
+ax2 <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">1</span>,<span style="color: #666666">3</span>,<span style="color: #666666">2</span>)
+ax2<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Green Channel&#39;</span>)
+ax2<span style="color: #666666">.</span>imshow(green, interpolation <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;bicubic&#39;</span>, cmap<span style="color: #666666">=</span><span style="color: #BA2121">&#39;gray&#39;</span>)
+ax2<span style="color: #666666">.</span>set_xticks([])
+ax2<span style="color: #666666">.</span>set_yticks([])  
+
+ax3 <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">1</span>,<span style="color: #666666">3</span>,<span style="color: #666666">3</span>)
+ax3<span style="color: #666666">.</span>set_title(<span style="color: #BA2121">&#39;Blue Channel&#39;</span>)
+ax3<span style="color: #666666">.</span>imshow(blue, interpolation <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;bicubic&#39;</span>, cmap<span style="color: #666666">=</span><span style="color: #BA2121">&#39;gray&#39;</span>)
+ax3<span style="color: #666666">.</span>set_xticks([])
+ax3<span style="color: #666666">.</span>set_yticks([])  
+
+fs <span style="color: #666666">=</span> addJBFigure( <span style="color: #BA2121">&quot;fs&quot;</span>, <span style="color: #666666">0</span>, <span style="color: #666666">0</span>, fig )
+plt<span style="color: #666666">.</span>close()
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+<div class="jb-print jb-render">
+<div class="jb-output jb-render code" style="text-align:center">
+<div class="jb-stdout code" style="display:inline-block; width:90%">
+<pre >
+Plane red Max 255 Min 0 Average 121.17478125
+Plane red Max 254.17478125 Min -0.8252187500000048 Average 120.34956249999986
+</pre>
+</div>
+</div>
+
+</div><!-- end of jb-print jb-render -->
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-3c509f96-88e7-486d-93fc-e58694ceeb70" ><span id="id-3c509f96-88e7-486d-93fc-e58694ceeb70"><img id="img-id-3c509f96-88e7-486d-93fc-e58694ceeb70"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-5517f99f-8516-4bce-b74c-82f214ff520c" ><span id="id-5517f99f-8516-4bce-b74c-82f214ff520c"><img id="img-id-5517f99f-8516-4bce-b74c-82f214ff520c" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00005_frag_00001" data-state="slide_00005_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Seperated into R,G,B, Channels</h1>
+
+<span id="id-abc4db4f-8517-4a05-8a36-70684c1e585a" ><span id="id-abc4db4f-8517-4a05-8a36-70684c1e585a"><img id="img-id-abc4db4f-8517-4a05-8a36-70684c1e585a"     src="assets/images/fs.svg"/></span>
+</span>
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-a8b605cc-93c6-40b5-8338-acd51a9f4b16" ><span id="id-a8b605cc-93c6-40b5-8338-acd51a9f4b16"><img id="img-id-a8b605cc-93c6-40b5-8338-acd51a9f4b16"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-bf96334f-7a2a-45bb-814f-959747e91a74" ><span id="id-bf96334f-7a2a-45bb-814f-959747e91a74"><img id="img-id-bf96334f-7a2a-45bb-814f-959747e91a74" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00006_frag_00001" data-state="slide_00006_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+<div class="jb-input jb-render jb-code" style="text-align:center">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-input-code jb-render">
+<div class="highlight" style="background: #f8f8f8; color:#101010;display=inline-block;"><pre style="line-height: 125%"><span></span>url <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;https://th.bing.com/th/id/R3079f4cc55e2c58f0b615a2fed36840c?rik=0q2MDYjJKHguzw&amp;riu=http</span><span style="color: #BB6688; font-weight: bold">%3a%2f%2f</span><span style="color: #BA2121">farm3.static.flickr.com</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">2143</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">1564936103_28c29d2682.jpg&amp;ehk=qonNJamLXa0EBhbrb9GHOdNDKUh0y5E9oc</span><span style="color: #BB6688; font-weight: bold">%2f</span><span style="color: #BA2121">U4P1sxuQ</span><span style="color: #BB6688; font-weight: bold">%3d</span><span style="color: #BA2121">&amp;risl=&amp;pid=ImgRaw&#39;</span>
+
+img <span style="color: #666666">=</span> io<span style="color: #666666">.</span>imread( url )
+img <span style="color: #666666">=</span> cv2<span style="color: #666666">.</span>resize(img, (<span style="color: #666666">800</span>, <span style="color: #666666">600</span> ) )
+
+fig <span style="color: #666666">=</span> plt<span style="color: #666666">.</span>figure( figsize<span style="color: #666666">=</span>(<span style="color: #666666">12</span>,<span style="color: #666666">12</span>))
+<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">3</span>):
+
+  img2 <span style="color: #666666">=</span> img<span style="color: #666666">.</span>copy()
+
+  mapPlane( img2, i, <span style="color: #666666">4</span> )
+
+  ax <span style="color: #666666">=</span> fig<span style="color: #666666">.</span>add_subplot(<span style="color: #666666">1</span>,<span style="color: #666666">3</span>,i<span style="color: #666666">+1</span>)
+  ax<span style="color: #666666">.</span>set_title( <span style="color: #BA2121">f&#39;Composed Image </span><span style="color: #BB6688; font-weight: bold">{</span>i<span style="color: #BB6688; font-weight: bold">}</span><span style="color: #BA2121">&#39;</span>)
+  ax<span style="color: #666666">.</span>imshow(img2, interpolation<span style="color: #666666">=</span><span style="color: #BA2121">&#39;bicubic&#39;</span>)
+  ax<span style="color: #666666">.</span>set_xticks([])
+  ax<span style="color: #666666">.</span>set_yticks([])  
+
+f3 <span style="color: #666666">=</span> addJBFigure(<span style="color: #BA2121">&quot;f3&quot;</span>, <span style="color: #666666">0</span>, <span style="color: #666666">0</span>, fig )
+plt<span style="color: #666666">.</span>close()
+</pre></div>
+
+</div><!-- end of jb-input-code jb-render -->
+
+</div>
+<div class="jb-print jb-render">
+<div class="jb-output jb-render code" style="text-align:center">
+<div class="jb-stdout code" style="display:inline-block; width:90%">
+<pre >
+Plane red Max 255 Min 0 Average 121.17478125
+Plane red Max 154.17478125 Min 90.17478125 Average 120.59226041666653
+Plane green Max 255 Min 2 Average 126.70255
+Plane green Max 158.70255 Min 94.70255 Average 126.25262708333332
+Plane blue Max 255 Min 0 Average 121.35099166666667
+Plane blue Max 154.3509916666667 Min 90.35099166666667 Average 120.81315624999985
+</pre>
+</div>
+</div>
+
+</div><!-- end of jb-print jb-render -->
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-4be5617a-6da7-4b9d-85a4-1740eb88cc32" ><span id="id-4be5617a-6da7-4b9d-85a4-1740eb88cc32"><img id="img-id-4be5617a-6da7-4b9d-85a4-1740eb88cc32"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-dc44971e-6206-427a-96a1-cca125772801" ><span id="id-dc44971e-6206-427a-96a1-cca125772801"><img id="img-id-dc44971e-6206-427a-96a1-cca125772801" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+<section id="slide_00007_frag_00001" data-state="slide_00007_frag_00001">
+
+
+<!-- Header -->
+  
+
+<!-- Background -->
+
+
+<!-- Slide -->
+<div class="jb-slide">
+
+<div class="jb-output-code jb-render">
+
+<!-- start embedded style -->
+
+<!-- end embedded style -->
+<div class="jb-output jb-render">
+
+<h1>Sample Bild</h1>
+
+<div class="jb-text">
+<p>Modification of red and especially green channel show great distortions</p>
+<p>Variation of blue has little impact on image quality</p>
+<p>Human visual system is most sensitive in the green channel</p>
+</div>
+
+<span id="id-0dc20c4f-afad-48d1-b796-490ab2eea9ef" ><span id="id-0dc20c4f-afad-48d1-b796-490ab2eea9ef"><img id="img-id-0dc20c4f-afad-48d1-b796-490ab2eea9ef"     src="assets/images/f3.svg"/></span>
+</span>
+</div><!-- end of jb-output jb-render -->
+</div><!-- end of jb-output-code jb-render -->
+
+
+</div>
+<!-- Footer -->
+
+<div class="jb-footer-left plain">
+    <span id="id-3382a2c2-15e7-429c-9e81-8802254b1f9b" ><span id="id-3382a2c2-15e7-429c-9e81-8802254b1f9b"><img id="img-id-3382a2c2-15e7-429c-9e81-8802254b1f9b"     src="assets/images/logo.png"/></span>
+</span>
+
+</div>
+<div class="jb-footer-right plain">
+    <span id="id-040b0fd8-e401-41f2-abbf-e5e2f5dce648" ><span id="id-040b0fd8-e401-41f2-abbf-e5e2f5dce648"><img id="img-id-040b0fd8-e401-41f2-abbf-e5e2f5dce648" width="162" height="138"   src="assets/images/robbi.png"/></span>
+</span>
+
+</div>
+
+<aside class="notes">
+
+</aside>
+
+
+
+</section>
+        </div>
+        </div>
+
+        <script src="js/reveal.js"></script>
+
+        <script>
+            // More info about config & dependencies:
+            // - https://github.com/hakimel/reveal.js#configuration
+            // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+                math: {
+                    mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+                    config: 'TeX-AMS_HTML-full',  // See http://docs.mathjax.org/en/latest/config-files.html
+                    // tex2jax: {
+                    //     inlineMath: [['$', '$'], ['\(', '\)']],
+                    //     displayMath: [['$$', '$$'], ['\[', '\]']],
+                    //     processEscapes: true,
+                    //     processEnvironments: true,
+                    //     skipTags: ['script', 'noscript', 'style', 'textarea', 'code', 'pre'],
+                    //     displayAlign: 'center',
+                    // }                
+                },
+                dependencies: [
+                    { src: 'plugin/markdown/marked.js' },
+                    { src: 'plugin/markdown/markdown.js' },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/math/math.js', async: true }
+                ]
+            });
+        </script>
+
+        <script>
+            <!-- Assets -->
+var assets = {
+"robbi" : new JBImage( "robbi", "12677", "162", "138", null, null, "assets/images/robbi", "png" ),
+"logo" : new JBImage( "logo", "12033", "0", "0", null, null, "assets/images/logo", "png" ),
+"fira-logo-1" : new JBImage( "fira-logo-1", "93836", "0", "0", null, null, "assets/images/FIRA-logo-1", "png" ),
+"pairLogo" : new JBImage( "pairLogo", "63051", "0", "0", null, null, "assets/images/pairLogo", "png" ),
+"f1" : new JBImage( "f1", "4146826", "0", "0", null, null, "assets/images/f1", "svg" ),
+"fs" : new JBImage( "fs", "1037704", "0", "0", null, null, "assets/images/fs", "svg" ),
+"f3" : new JBImage( "f3", "2335565", "0", "0", null, null, "assets/images/f3", "svg" ),
+"f4" : new JBImage( "f4", "1989657", "0", "0", null, null, "assets/images/f4", "svg" ) 
+};
+var assetInstances = {
+    "id-651cb30d-d7e4-480d-bb09-e8edd634fe17": assets["robbi"],
+    "id-1b5297b9-dfbe-4af1-bb0f-a2dee5766b1c": assets["robbi"],
+    "id-5517f99f-8516-4bce-b74c-82f214ff520c": assets["robbi"],
+    "id-bf96334f-7a2a-45bb-814f-959747e91a74": assets["robbi"],
+    "id-dc44971e-6206-427a-96a1-cca125772801": assets["robbi"],
+    "id-040b0fd8-e401-41f2-abbf-e5e2f5dce648": assets["robbi"],
+    "id-76a8be99-88ce-4b5f-9625-59fc7e7aca9b": assets["logo"],
+    "id-9e225a32-9f46-4b62-86c3-69c7ecbc7574": assets["logo"],
+    "id-3c509f96-88e7-486d-93fc-e58694ceeb70": assets["logo"],
+    "id-a8b605cc-93c6-40b5-8338-acd51a9f4b16": assets["logo"],
+    "id-4be5617a-6da7-4b9d-85a4-1740eb88cc32": assets["logo"],
+    "id-3382a2c2-15e7-429c-9e81-8802254b1f9b": assets["logo"],
+    "id-d6b7bcbd-48ef-4b37-b221-d814838486ca": assets["f1"],
+    "id-abc4db4f-8517-4a05-8a36-70684c1e585a": assets["fs"],
+    "id-0dc20c4f-afad-48d1-b796-490ab2eea9ef": assets["f3"]
+};
+<!-- End of Assets -->
+
+            convertURLs(assetInstances, "smart-path");
+        </script>
+        <script>
+            <!-- Characters -->
+var characters =
+{};
+<!-- End of Characters -->
+
+        </script>
+    </body>
+</html>
